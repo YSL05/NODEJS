@@ -48,6 +48,16 @@
             <li>第三步 检测是否配置成功 ssh -T git@github.com / </li>
             <li>第四步 将本地仓库通过SSH推到远程仓库 </li>
         </ol>
+        <li>第七步 将远程仓库同步到本地</li>
+        <ol>
+            <li>git clone 远程仓库地址</li>
+            <li>分支的含义 master用于保存和记录整个项目已完成的功能 分支用于开发测试新功能</li>
+            <li>git branch #查看所有分支 / git branch 分支名字 #创建新分支 / git checkout 分支名字 #切换到分支上 / git checkout -b 分支名字 #创建和切换</li>
+            <li>分支合并 / git merge 分支名字 / git branch -d 分支名字 #删除分支 / </li>
+            <li>分支冲突(两个分支对同一个文件进行修改并进行提交) 手动解决冲突 再进行上传（add commit）</li>
+            <li>推送分支 git push -u 本地分支名字：远程仓库分支名字 下载远程仓库分支 git checkout 远程仓库分支名字 / git checkout -b 本地仓库名字 origin/远程仓库名字</li>
+            <li>拉取远程仓库分支 git pull</li>
+        </ol>
     </ol>
 </body>
 </html>
