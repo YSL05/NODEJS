@@ -35,11 +35,18 @@
             <li>第五步 回顾提交历史 git log / git log -2  / git log -2 --pretty=oneline / git log -2 --pretty=format:"%h | %an | %ar | %s"</li>
             <li>第六步 git reset --hard 提交命令名 / git relog --pretty=oneline #查看命令操作历史</li>
         </ol>
-        <li>第五步 与github进行交互</li>
+        <li>第五步 使用https与github进行交互</li>
         <ol>
             <li>第一步 git remote add origin 仓库https的地址 / git push -u origin main</li>
+            <li>第二步 #将本地文件修改推到远程仓库中 先进行本地仓库的commit 在进行push  git push</li>
             <li></li>
-            <li></li>
+        </ol>
+        <li>第六步 使用SSH与github交互</li>
+        <ol>
+            <li>第一步 生成SSH密匙  ssh-keygen -t rsa -b 4096 -C "你的github邮箱名字" / 连续敲击三次回车即可在C：\User\用户名文件夹\.ssh</li>
+            <li>第二步 在路径中打开id_rsa.pub文件 在github中 setting/SSH and GPG keys/New SSH key</li>
+            <li>第三步 检测是否配置成功 ssh -T git@github.com / </li>
+            <li>第四步 将本地仓库通过SSH推到远程仓库 </li>
         </ol>
     </ol>
 </body>
