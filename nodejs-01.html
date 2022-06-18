@@ -27,11 +27,14 @@
     <p>终端常用操作: 上箭头 历史命令 TAB 补全路径 ESC 清除命令 cls 清空终端</p>
     <h3>fs文件系统模块</h3>
     <ol>
-        <li>fs.readFile(path,option,callback) 读取文件内容</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>fs.readFile(path[,option],callback) 读取文件内容</li>
+        <li>fs.writefile(file,data[,options],callback) 写入文件内容 data 为写入数据 []为可选参数</li>
+    </ol>
+    <h3>path路径模块</h3>
+    <ol>
+        <li>path.join(path,path,path,) 将多个路径模块拼接成一个完整的路径</li>
+        <li>path.basename(path[,'.扩展名']) 获取路径的最后一个部分，也可以去除扩展名</li>
+        <li>path.extname() 获取路径中的扩展名</li>
     </ol>
 </body>
 </html>
