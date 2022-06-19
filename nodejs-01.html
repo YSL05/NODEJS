@@ -28,13 +28,35 @@
     <h3>fs文件系统模块</h3>
     <ol>
         <li>fs.readFile(path[,option],callback) 读取文件内容</li>
-        <li>fs.writefile(file,data[,options],callback) 写入文件内容 data 为写入数据 []为可选参数</li>
+        <li>fs.writefile(file,data[,options],callback) 写入文件内容 data 为写入数据 []为可选参数,会覆盖掉原本的内容</li>
     </ol>
     <h3>path路径模块</h3>
     <ol>
         <li>path.join(path,path,path,) 将多个路径模块拼接成一个完整的路径</li>
         <li>path.basename(path[,'.扩展名']) 获取路径的最后一个部分，也可以去除扩展名</li>
         <li>path.extname() 获取路径中的扩展名</li>
+    </ol>
+    <h3>HTTP模块: 创建Web服务器</h3>
+    <ol>
+        <li>IP地址</li>
+        <li>域名与域名服务器</li>
+        <li>端口号  对应web服务；一个端口号对应一个web服务；在实际应用中，URL中端口80可以被省略；</li>
+        <li>req 请求对象 包含与客户端有关的数据和属性：url地址 method 请求类型 </li>
+        <li>res 响应对象 </li>
+    </ol>
+    <h3>模块化基本概念</h3>
+    <ol>
+        <li>模块来源不同：内置模块 自定义模块 第三方模块</li>
+        <li>模块作用域    内部定义变量不会被外部使用</li>
+        <li>通过module.exports向外共享属性和方法 </li>
+        <li></li>
+    </ol>
+    <h3>npm与包</h3>
+    <ol>
+        <li>npm install 包的名字</li>
+        <li>const 包名 = require('包名')</li>
+        <li>2.24.0 第一位数字代表大版本 第二位数字代表功能版本 第三位数字代表BUG修复版本</li>
+        <li></li> 
     </ol>
 </body>
 </html>
