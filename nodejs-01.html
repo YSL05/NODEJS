@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NODEJS学习前瞻</title>
-    <style>
-        li {
-            list-style-type: none;
-        }
-        body {
-            font-size: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NODEJS学习前瞻</title>
+<style>
+    li {
+        list-style-type: none;
+    }
+
+    body {
+        font-size: 20px;
+    }
+</style>
 </head>
+
 <body>
     <h1>Node.js</h1>
     <p style="color: red; font-size: 20px;">（可以搞个目录的模板用于记录笔记）</p>
@@ -40,14 +42,14 @@
     <ol>
         <li>IP地址</li>
         <li>域名与域名服务器</li>
-        <li>端口号  对应web服务；一个端口号对应一个web服务；在实际应用中，URL中端口80可以被省略；</li>
+        <li>端口号 对应web服务；一个端口号对应一个web服务；在实际应用中，URL中端口80可以被省略；</li>
         <li>req 请求对象 包含与客户端有关的数据和属性：url地址 method 请求类型 </li>
         <li>res 响应对象 </li>
     </ol>
     <h3>模块化基本概念</h3>
     <ol>
         <li>模块来源不同：内置模块 自定义模块 第三方模块</li>
-        <li>模块作用域    内部定义变量不会被外部使用</li>
+        <li>模块作用域 内部定义变量不会被外部使用</li>
         <li>通过module.exports向外共享属性和方法 </li>
         <li></li>
     </ol>
@@ -56,7 +58,47 @@
         <li>npm install 包的名字</li>
         <li>const 包名 = require('包名')</li>
         <li>2.24.0 第一位数字代表大版本 第二位数字代表功能版本 第三位数字代表BUG修复版本</li>
-        <li></li> 
+        <li>npm i 通过package.json文件一次性安装所有包</li>
+        <li>npm uninstall 包名 删除包</li>
+        <li>项目上线后不使用 仅开发时使用，开发包 npm install -D 包名</li>
+        <li>npm config get registry 查看下包的地址 npm config set registry=http://... 代表更换地址</li>
+        <li>nrm 包下载地址管理 npm i nrm -g 安装 nrm ls 查看所有包地址 nrm use taobao 使用淘宝镜像源</li>
+        <li>i5ting_toc包 将.md文件转换为.html文件 安装命令 npm install -g i5ting_toc 使用命令 i5ting_toc -f md文件路径 -o </li>
+        <li>包的规范结构 包单独目录存在 包中包含 name version main三个属性 包顶级目录在package.json里面</li>
+    </ol>
+    <h3>Express框架学习: 基于node.js构建的web框架 类似http 用于构架web服务器和api接口服务器</h3>
+    <ol>
+        <li>通过npm安装express npm i express</li>
+        <li>express.static()托管静态资源 app.use(express.static('./clock')) / app.use('/clock',express.static('./clock'))</li>
+        <li>nodemon 管理工具 不需要每次修改文件再重新运行文件</li>
+        <li>app.use 注册中间件 </li>
+        <li>中间件 function(req,res,next){ next() } 多个中间件采用相同的req和res，上游的req对象下游可以使用，多个中间件按照定义顺序处理，不使用app.use是局部中间件</li>
+        <li>路由 路由 映射关系 直接挂载到服务器上和路由模块导入</li>
+        <li>内置中间件 static快速托管静态资源 express.json 解析JSON格式的请求体数据 urlencoded 解析URL格式的请求体数据</li>
+        <li>第三方中间件 </li>
+        <li>Express接口 基于CORS解决跨域问题 cors为Express的第三方包 在路由模块之前使用cors模块解决跨域问题 安装 导入 使用 app.use(cors()) 注意事项 在服务器端配置 兼容问题 XMLHttpRequestLevel 2才能使用</li>
+    </ol>
+    <h3>MySQL 数据库学习</h3>
+    <ol>
+        <li>学习目标</li>
+        <ol>
+            <li>配置MySQL数据库</li>
+            <li>常见MySQL数据库命令</li>
+            <li>在Express中操作MySQL数据库</li>
+            <li>了解Session实现原理</li>
+            <li>了解JWT的实现原理</li>
+        </ol>
+        <li>SQL管理数据库 增（insert into）删（delete）查（select）改（update） 额外需要掌握的4种SQL语法 where条件 and or运算符 order by排序 count(*)函数</li>
+        <li>select 用法 select */列名 from 表名</li>
+        <li>在项目中操作数据库 安装第三方模块mysql 通过mysql连接到MySQL MySQL语句管理数据库</li>
+    </ol>
+    <h3>Web开发模式</h3>
+    <ol>
+        <li>服务端渲染和客户端渲染</li>
+        <li>身份认证 Session JWT 两种身份认证方式</li>
+        <li>http访问无状态 因此本地添加cookie作为记录，访问服务器时自动发送cookie</li>
+        <li>JWT(Json web token)组成部分 Header.Payload.Signature</li>
     </ol>
 </body>
+
 </html>
